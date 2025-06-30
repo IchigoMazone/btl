@@ -1,4 +1,2 @@
 `Lệnh tải : git clone https://github.com/IchigoMazone/btl.git`
-function sayHello() {
-  console.log("Hello world!");
-}
+<pre> ``` git clone https://github.com/username/repo.git cd repo npm install ``` </pre>
