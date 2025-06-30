@@ -1,5 +1,5 @@
-`Lệnh tải : git clone https://github.com/IchigoMazone/btl.git\n`
-`Hoặc bấm vào "Code" + "Download ZIP`
+`Lệnh tải : git clone https://github.com/IchigoMazone/btl.git
+Hoặc bấm vào "Code" + "Download ZIP`
 `Xong mở trên Intellij IDEA bằng cách`
 `Trong Intellij chọn mục File -> Open -> Project`
 `Chọn Fordel vừa Dơwn từ git`
