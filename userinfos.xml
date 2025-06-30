@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<UserInfos>
+    <UserInfo>
+        <fullName>Alice Smith</fullName>
+        <email>alice@example.com</email>
+        <phoneNumber>1234567890</phoneNumber>
+        <user>
+            <userName>alice</userName>
+            <password>alice123</password>
+        </user>
+    </UserInfo>
+    <UserInfo>
+        <fullName>Bob Johnson</fullName>
+        <email>bob@example.com</email>
+        <phoneNumber>1234567891</phoneNumber>
+        <user>
+            <userName>bob</userName>
+            <password>bob123</password>
+        </user>
+    </UserInfo>
+    <UserInfo>
+        <fullName>Charlie Williams</fullName>
+        <email>charlie@example.com</email>
+        <phoneNumber>1234567892</phoneNumber>
+        <user>
+            <userName>charlie</userName>
+            <password>charlie123</password>
+        </user>
+    </UserInfo>
+    <UserInfo>
+        <fullName>David Brown</fullName>
+        <email>david@example.com</email>
+        <phoneNumber>1234567893</phoneNumber>
+        <user>
+            <userName>david</userName>
+            <password>david123</password>
+        </user>
+    </UserInfo>
+    <UserInfo>
+        <fullName>Eve Davis</fullName>
+        <email>eve@example.com</email>
+        <phoneNumber>1234567894</phoneNumber>
+        <user>
+            <userName>eve</userName>
+            <password>eve123</password>
+        </user>
+    </UserInfo>
+    <UserInfo>
+        <fullName>Frank Miller</fullName>
+        <email>frank@example.com</email>
+        <phoneNumber>1234567895</phoneNumber>
+        <user>
+            <userName>frank</userName>
+            <password>frank123</password>
+        </user>
+    </UserInfo>
+    <UserInfo>
+        <fullName>Grace Wilson</fullName>
+        <email>grace@example.com</email>
+        <phoneNumber>1234567896</phoneNumber>
+        <user>
+            <userName>grace</userName>
+            <password>grace123</password>
+        </user>
+    </UserInfo>
+    <UserInfo>
+        <fullName>Hank Moore</fullName>
+        <email>hank@example.com</email>
+        <phoneNumber>1234567897</phoneNumber>
+        <user>
+            <userName>hank</userName>
+            <password>hank123</password>
+        </user>
+    </UserInfo>
+    <UserInfo>
+        <fullName>Ivy Taylor</fullName>
+        <email>ivy@example.com</email>
+        <phoneNumber>1234567898</phoneNumber>
+        <user>
+            <userName>ivy</userName>
+            <password>ivy123</password>
+        </user>
+    </UserInfo>
+    <UserInfo>
+        <fullName>Jack Anderson</fullName>
+        <email>jack@example.com</email>
+        <phoneNumber>1234567899</phoneNumber>
+        <user>
+            <userName>jack</userName>
+            <password>jack123</password>
+        </user>
+    </UserInfo>
+    <UserInfo>
+        <fullName>Trinh Nhu Nhat</fullName>
+        <email>nhattrinh2702@gmail.com</email>
+        <phoneNumber>0389927069</phoneNumber>
+        <user>
+            <userName>nhattrinh2702</userName>
+            <password>123456789z</password>
+        </user>
+    </UserInfo>
+</UserInfos>
