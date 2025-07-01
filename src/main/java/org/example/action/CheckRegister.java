@@ -136,11 +136,6 @@ public class CheckRegister {
             return passError;
         }
 
-        String confirmError = validateConfirmPassword(password, confirmPassword);
-        if (confirmError != null) {
-            return confirmError;
-        }
-
         String emailError = validateEmail(email);
         if (emailError != null) {
             return emailError;
@@ -149,6 +144,11 @@ public class CheckRegister {
         String phoneError = validatePhone(phone);
         if (phoneError != null) {
             return phoneError;
+        }
+
+        String confirmError = validateConfirmPassword(password, confirmPassword);
+        if (confirmError != null) {
+            return confirmError;
         }
 
         return null;

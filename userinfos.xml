@@ -112,4 +112,11 @@
         <email>abcd27@gmail.com</email>
         <phoneNumber>0123456789</phoneNumber>
     </UserInfo>
+    <UserInfo>
+        <userName>nhatnhat1</userName>
+        <password>99999999z</password>
+        <fullName>trinhnhunhat</fullName>
+        <email>nhatnhat1@gmail.com</email>
+        <phoneNumber>0999999999</phoneNumber>
+    </UserInfo>
 </UserInfos>
