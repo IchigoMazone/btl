@@ -78,8 +78,9 @@ public class LoginView extends JFrame {
         );
     }
 
-    public JLabel getLblInfor() {
-        return lblInfor;
+    public void showError(String message) {
+        lblInfor.setText(message);
+        int width = lblInfor.getFontMetrics(lblInfor.getFont()).stringWidth(message);
+        lblInfor.setBounds(600 - width / 2, 670, width, 30);
     }
-
 }

@@ -126,4 +126,18 @@
         <email>TrinhNhuNhat2@gmail.com</email>
         <phoneNumber>0123456666</phoneNumber>
     </UserInfo>
+    <UserInfo>
+        <userName>lynhnguz1</userName>
+        <password>999999999z</password>
+        <fullName>nguyendieulynh</fullName>
+        <email>meo23@gmail.com</email>
+        <phoneNumber>0999999999</phoneNumber>
+    </UserInfo>
+    <UserInfo>
+        <userName>helloworld2</userName>
+        <password>12345678z</password>
+        <fullName>helloworld</fullName>
+        <email>hel2@gmail.com</email>
+        <phoneNumber>0125567335</phoneNumber>
+    </UserInfo>
 </UserInfos>

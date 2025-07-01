@@ -97,10 +97,6 @@ public class RegisterView extends JFrame {
         return new UserInfo(fullName, username, password, email, phone);
     }
 
-    public JLabel getLblInfor() {
-        return lblInfor;
-    }
-
     public void showError(String message) {
         lblInfor.setText(message);
         int width = lblInfor.getFontMetrics(lblInfor.getFont()).stringWidth(message);
@@ -110,7 +106,6 @@ public class RegisterView extends JFrame {
     public String getConfirmPassword() {
         return String.valueOf(comfirmPasswordField.getPassword()).trim();
     }
-
 }
 
 

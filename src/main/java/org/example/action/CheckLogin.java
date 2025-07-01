@@ -4,17 +4,31 @@ import org.example.service.UserInfoService;
 import java.util.List;
 
 public class CheckLogin {
+    public static String validateUsername(String userName) {
+        if (userName.length() < 8 || userName.length() > 20) {
+            return "Tên đăng nhập phải từ 8–20 ký tự.";
+        }
+        return null;
+    }
+
+    public static String validatePassword(String password) {
+        if (password.length() < 8) {
+            return "Mật khẩu phải có ít nhất 8 ký tự.";
+        }
+        return null;
+    }
+
     public static String checkUser(String fileName, String userName, String password) {
         if (userName.isEmpty() || password.isEmpty()) {
             return "Vui lòng nhập đầy đủ thông tin!";
         }
 
-        String userError = CheckRegister.validateUsername(userName);
+        String userError = validateUsername(userName);
         if (userError != null) {
             return userError;
         }
 
-        String passError = CheckRegister.validatePassword(password);
+        String passError = validatePassword(password);
         if (passError != null) {
             return passError;
         }
