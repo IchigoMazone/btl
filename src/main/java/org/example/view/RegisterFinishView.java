@@ -1,7 +1,11 @@
 package org.example.view;
 import org.example.controller.RegisterFinishController;
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.ImageIcon;
+import java.awt.Font;
+import java.awt.Color;
 
 public class RegisterFinishView extends JFrame {
     private JLabel Desktop;

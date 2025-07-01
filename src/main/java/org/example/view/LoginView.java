@@ -1,8 +1,14 @@
 package org.example.view;
 import org.example.entity.User;
 import org.example.controller.LoginController;
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+import javax.swing.JPasswordField;
+import javax.swing.JFrame;
+import javax.swing.ImageIcon;
+import java.awt.Font;
+import java.awt.Color;
 
 public class LoginView extends JFrame {
     private JLabel imgDesktop;
@@ -17,7 +23,6 @@ public class LoginView extends JFrame {
         initComponents();
         btnLogin.addActionListener(e -> LoginController.handleLogin(this));
         btnRegister.addActionListener(e -> LoginController.openRegister(this));
-
     }
 
     private void initComponents() {

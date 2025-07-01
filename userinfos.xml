@@ -140,4 +140,11 @@
         <email>hel2@gmail.com</email>
         <phoneNumber>0125567335</phoneNumber>
     </UserInfo>
+    <UserInfo>
+        <userName>asdf1234</userName>
+        <password>00000000z</password>
+        <fullName>Trinh Nhu Nhat</fullName>
+        <email>asdas12@gmail.com</email>
+        <phoneNumber>0999999999</phoneNumber>
+    </UserInfo>
 </UserInfos>

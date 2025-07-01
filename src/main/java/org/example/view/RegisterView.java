@@ -1,9 +1,14 @@
 package org.example.view;
 import org.example.controller.RegisterController;
-import org.example.entity.User;
 import org.example.entity.UserInfo;
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+import javax.swing.JPasswordField;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import java.awt.Font;
+import java.awt.Color;
 
 public class RegisterView extends JFrame {
     private JLabel imgDesktop;

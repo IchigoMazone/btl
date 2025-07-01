@@ -1,10 +1,10 @@
 package org.example.controller;
 import org.example.view.LoginView;
-import org.example.view.RegisterFinishView;
+import org.example.view.UserView;
 import javax.swing.Timer;
 
-public class RegisterFinishController {
-    public static void openLogin(RegisterFinishView view) {
+public class UserController {
+    public static void Logout(UserView view) {
         Timer timer = new Timer(1000, e -> {
             view.dispose();
             new LoginView().setVisible(true);

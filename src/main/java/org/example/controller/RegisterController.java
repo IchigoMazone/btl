@@ -2,9 +2,9 @@ package org.example.controller;
 import org.example.action.CheckRegister;
 import org.example.entity.UserInfo;
 import org.example.service.UserInfoService;
-import org.example.view.LoginView;
 import org.example.view.RegisterFinishView;
 import org.example.view.RegisterView;
+import javax.swing.Timer;
 
 public class RegisterController {
     public static void handleRegister(RegisterView view) {
@@ -15,20 +15,18 @@ public class RegisterController {
         String email = info.getEmail();
         String phone = info.getPhoneNumber();
         String confirmPassword = view.getConfirmPassword();
-
         String error = CheckRegister.checkRegis(fullName, userName, password, email, phone, confirmPassword);
 
         if (error != null) {
             view.showError(error);
         } else {
             UserInfoService.saveUser(info, "userinfos.xml");
-            view.dispose();
-            new RegisterFinishView().setVisible(true);
+            Timer timer = new Timer(1000, e -> {
+                view.dispose();
+                new RegisterFinishView().setVisible(true);
+            });
+            timer.setRepeats(false);
+            timer.start();
         }
-    }
-
-    public static void handleBack(RegisterView view) {
-        view.dispose();
-        new LoginView().setVisible(true);
     }
 }
