@@ -10,13 +10,13 @@ public class RegisterController {
     public static void handleRegister(RegisterView view) {
         UserInfo info = view.getUserInfo();
         String fullName = info.getFullName();
-        String userName = info.getUser().getUserName();
-        String password = info.getUser().getPassword();
+        String userName = info.getUserName();
+        String password = info.getPassword();
         String email = info.getEmail();
         String phone = info.getPhoneNumber();
         String confirmPassword = view.getConfirmPassword();
 
-        String error = CheckRegister.checkRegis(fullName, userName, password, confirmPassword, email, phone);
+        String error = CheckRegister.checkRegis(fullName, userName, password, email, phone, confirmPassword);
 
         if (error != null) {
             view.showError(error);

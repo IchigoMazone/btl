@@ -1,5 +1,10 @@
 package org.example.action;
 
+import org.example.entity.UserInfo;
+import org.example.service.UserInfoService;
+
+import java.util.List;
+
 public class CheckRegister {
     public static boolean isValidEmail(String email) {
         if (email == null || email.isEmpty()) {
@@ -83,14 +88,25 @@ public class CheckRegister {
         return null;
     }
 
+    public static String usernameExists(String userName) {
+        List<UserInfo> list = UserInfoService.readAllUsers("userinfos.xml");
+        for (UserInfo info : list) {
+            if (info.getUserName().equals(userName)) {
+                return "Tài khoản đã tồn tại.";
+            }
+        }
+        return null;
+    }
+
     public static String checkRegis(
             String fullName,
             String userName,
             String password,
-            String confirmPassword,
             String email,
-            String phone
+            String phone,
+            String confirmPassword
     ) {
+
         if (fullName.isEmpty() ||
                 userName.isEmpty() ||
                 password.isEmpty() ||
@@ -108,6 +124,11 @@ public class CheckRegister {
         String userError = validateUsername(userName);
         if (userError != null) {
             return userError;
+        }
+
+        String userExists = usernameExists(userName);
+        if (userExists != null) {
+            return userExists;
         }
 
         String passError = validatePassword(password);

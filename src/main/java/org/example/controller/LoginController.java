@@ -12,13 +12,18 @@ public class LoginController {
         User user = view.getUser();
 
         JLabel lblInfor = view.getLblInfor();
+        String error = CheckLogin.checkUser("userinfos.xml", user.getUserName(), user.getPassword());
 
         if (user.getUserName().equals("admin") && user.getPassword().equals("123456")) {
             lblInfor.setText("Đăng nhập với quyền Admin");
-        } else if (CheckLogin.checkUser("userinfos.xml", user.getUserName(), user.getPassword())) {
-            lblInfor.setText("Đăng nhập với quyền User.");
-        } else {
-            lblInfor.setText("Tài khoản hoặc mật khẩu không chính xác.");
+        }
+
+        else if (error != null) {
+            lblInfor.setText(error);
+        }
+
+        else {
+            lblInfor.setText("Đăng nhập với quyền User");
         }
 
         int width = lblInfor.getFontMetrics(lblInfor.getFont()).stringWidth(lblInfor.getText());

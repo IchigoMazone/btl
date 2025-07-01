@@ -94,11 +94,7 @@ public class RegisterView extends JFrame {
         String password = String.valueOf(passwordField.getPassword()).trim();
         String email = emailField.getText().trim();
         String phone = phoneField.getText().trim();
-        return new UserInfo(fullName, email, phone, new User(username, password));
-    }
-
-    public JPasswordField getComfirmPasswordField() {
-        return comfirmPasswordField;
+        return new UserInfo(fullName, username, password, email, phone);
     }
 
     public JLabel getLblInfor() {
