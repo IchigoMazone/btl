@@ -1,23 +1,15 @@
 package org.example.action;
-
 import org.example.entity.UserInfo;
 import org.example.service.UserInfoService;
-
 import java.util.List;
 
 public class CheckRegister {
     public static boolean isValidEmail(String email) {
-        if (email == null || email.isEmpty()) {
-            return false;
-        }
         String emailRegex = "^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,}$";
         return email.matches(emailRegex);
     }
 
     public static String validateFullName(String fullName) {
-        if (fullName == null || fullName.isEmpty()) {
-            return "Họ tên không được để trống.";
-        }
         if (fullName.length() < 8) {
             return "Họ tên phải có ít nhất 8 ký tự.";
         }
@@ -28,9 +20,6 @@ public class CheckRegister {
     }
 
     public static String validateUsername(String userName) {
-        if (userName == null || userName.isEmpty()) {
-            return "Tên đăng nhập không được để trống.";
-        }
         if (userName.length() < 8 || userName.length() > 20) {
             return "Tên đăng nhập phải từ 8–20 ký tự.";
         }
@@ -44,9 +33,6 @@ public class CheckRegister {
     }
 
     public static String validatePassword(String password) {
-        if (password == null || password.isEmpty()) {
-            return "Mật khẩu không được để trống.";
-        }
         if (password.length() < 8) {
             return "Mật khẩu phải có ít nhất 8 ký tự.";
         }
@@ -60,9 +46,6 @@ public class CheckRegister {
     }
 
     public static String validateConfirmPassword(String password, String confirmPassword) {
-        if (confirmPassword == null || confirmPassword.isEmpty()) {
-            return "Bạn chưa nhập lại mật khẩu.";
-        }
         if (!password.equals(confirmPassword)) {
             return "Mật khẩu nhập lại không khớp.";
         }
@@ -70,20 +53,18 @@ public class CheckRegister {
     }
 
     public static String validateEmail(String email) {
-        if (!email.isEmpty() && !isValidEmail(email)) {
+        if (!isValidEmail(email)) {
             return "Email không hợp lệ.";
         }
         return null;
     }
 
     public static String validatePhone(String phone) {
-        if (!phone.isEmpty()) {
-            if (!phone.matches("\\d+")) {
-                return "Số điện thoại chỉ được chứa chữ số.";
-            }
-            if (!phone.matches("0\\d{9}")) {
-                return "Số điện thoại phải có 10 số và bắt đầu bằng 0.";
-            }
+        if (!phone.matches("\\d+")) {
+            return "Số điện thoại chỉ được chứa chữ số.";
+        }
+        if (!phone.matches("0\\d{9}")) {
+            return "Số điện thoại phải có 10 số và bắt đầu bằng 0.";
         }
         return null;
     }

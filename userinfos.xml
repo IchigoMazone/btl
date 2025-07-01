@@ -119,4 +119,11 @@
         <email>nhatnhat1@gmail.com</email>
         <phoneNumber>0999999999</phoneNumber>
     </UserInfo>
+    <UserInfo>
+        <userName>trinhnhunhat1</userName>
+        <password>trinhnhunhat1</password>
+        <fullName>TrinhNhuNhat</fullName>
+        <email>TrinhNhuNhat2@gmail.com</email>
+        <phoneNumber>0123456666</phoneNumber>
+    </UserInfo>
 </UserInfos>
