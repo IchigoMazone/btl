@@ -22,7 +22,7 @@ public class AdminView extends JFrame {
         setLocationRelativeTo(null);
         setLayout(null);
 
-        backgroundLabel = new JLabel(new ImageIcon("src/main/java/org/example/img/registerfinish.png"));
+        backgroundLabel = new JLabel(new ImageIcon("src/main/java/org/example/img/bgr1.png"));
         backgroundLabel.setBounds(0, 0, 1200, 800);
         backgroundLabel.setLayout(null);
 

@@ -40,7 +40,7 @@ public class RegisterView extends JFrame {
 
         lblTitle = new JLabel("Đăng ký tài khoản");
         lblTitle.setFont(new Font("Arial", Font.BOLD, 16));
-        lblTitle.setForeground(new Color(0, 200, 0));
+        lblTitle.setForeground(new Color(135, 206, 235));
         int widthTitle = lblTitle.getFontMetrics(lblTitle.getFont()).stringWidth(lblTitle.getText());
         lblTitle.setBounds(600 - widthTitle / 2, 170, widthTitle, 30);
         imgDesktop.add(lblTitle);
@@ -83,10 +83,13 @@ public class RegisterView extends JFrame {
 
         lblInfor = new JLabel("");
         lblInfor.setFont(new Font("Arial", Font.PLAIN, 12));
+        lblInfor.setForeground(new Color(255, 112, 67));
         imgDesktop.add(lblInfor);
 
         btnRegister = new JButton("Đăng ký");
-        btnRegister.setFont(new Font("Arial", Font.BOLD, 12));
+        btnRegister.setFont(new Font("Arial", Font.PLAIN, 12));
+        btnRegister.setForeground(Color.WHITE);
+        btnRegister.setBackground(new Color(131, 198, 159));
         btnRegister.setBounds(440, 655, 320, 33);
         imgDesktop.add(btnRegister);
 

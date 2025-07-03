@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Rooms>
+    <!-- Tầng 1 -->
+    <Room>
+        <roomNumber>101</roomNumber>
+        <status>Trống</status>
+        <roomType>Standard</roomType>
+        <pricePerNight>500000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>102</roomNumber>
+        <status>Có khách</status>
+        <roomType>Standard</roomType>
+        <pricePerNight>500000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>103</roomNumber>
+        <status>Sửa chữa</status>
+        <roomType>Standard</roomType>
+        <pricePerNight>500000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>104</roomNumber>
+        <status>Trống</status>
+        <roomType>Standard</roomType>
+        <pricePerNight>500000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>105</roomNumber>
+        <status>Có khách</status>
+        <roomType>Standard</roomType>
+        <pricePerNight>500000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>106</roomNumber>
+        <status>Trống</status>
+        <roomType>Standard</roomType>
+        <pricePerNight>500000</pricePerNight>
+    </Room>
+
+    <!-- Tầng 2 -->
+    <Room>
+        <roomNumber>201</roomNumber>
+        <status>Sửa chữa</status>
+        <roomType>Deluxe</roomType>
+        <pricePerNight>700000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>202</roomNumber>
+        <status>Trống</status>
+        <roomType>Deluxe</roomType>
+        <pricePerNight>700000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>203</roomNumber>
+        <status>Có khách</status>
+        <roomType>Deluxe</roomType>
+        <pricePerNight>700000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>204</roomNumber>
+        <status>Trống</status>
+        <roomType>Deluxe</roomType>
+        <pricePerNight>700000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>205</roomNumber>
+        <status>Có khách</status>
+        <roomType>Deluxe</roomType>
+        <pricePerNight>700000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>206</roomNumber>
+        <status>Trống</status>
+        <roomType>Deluxe</roomType>
+        <pricePerNight>700000</pricePerNight>
+    </Room>
+
+    <!-- Tầng 3 -->
+    <Room>
+        <roomNumber>301</roomNumber>
+        <status>Trống</status>
+        <roomType>Suite</roomType>
+        <pricePerNight>900000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>302</roomNumber>
+        <status>Có khách</status>
+        <roomType>Suite</roomType>
+        <pricePerNight>900000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>303</roomNumber>
+        <status>Sửa chữa</status>
+        <roomType>Suite</roomType>
+        <pricePerNight>900000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>304</roomNumber>
+        <status>Trống</status>
+        <roomType>Suite</roomType>
+        <pricePerNight>900000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>305</roomNumber>
+        <status>Có khách</status>
+        <roomType>Suite</roomType>
+        <pricePerNight>900000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>306</roomNumber>
+        <status>Trống</status>
+        <roomType>Suite</roomType>
+        <pricePerNight>900000</pricePerNight>
+    </Room>
+
+    <!-- Tầng 4 -->
+    <Room>
+        <roomNumber>401</roomNumber>
+        <status>Có khách</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1200000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>402</roomNumber>
+        <status>Trống</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1200000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>403</roomNumber>
+        <status>Sửa chữa</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1200000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>404</roomNumber>
+        <status>Trống</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1200000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>405</roomNumber>
+        <status>Có khách</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1200000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>406</roomNumber>
+        <status>Trống</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1200000</pricePerNight>
+    </Room>
+
+    <!-- Tầng 5 -->
+    <Room>
+        <roomNumber>501</roomNumber>
+        <status>Sửa chữa</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1200000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>502</roomNumber>
+        <status>Trống</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1200000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>503</roomNumber>
+        <status>Có khách</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1200000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>504</roomNumber>
+        <status>Trống</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1200000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>505</roomNumber>
+        <status>Có khách</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1200000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>506</roomNumber>
+        <status>Trống</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1200000</pricePerNight>
+    </Room>
+</Rooms>
