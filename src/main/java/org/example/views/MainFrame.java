@@ -1,5 +1,6 @@
 package org.example.views;
 
+import com.formdev.flatlaf.FlatLightLaf;
 import javax.swing.*;
 import java.awt.*;
 
@@ -37,7 +38,7 @@ public class MainFrame extends JFrame {
         mainCardLayout = new CardLayout();
         mainPanel = new JPanel(mainCardLayout);
 
-        // Init all panels
+        // Khởi tạo các panel và truyền this nếu cần để callback
         loginPanel = new LoginPanel(this);
         registerPanel = new RegisterPanel(this);
         forgotPasswordPanel = new ForgotPasswordPanel(this);
@@ -47,7 +48,7 @@ public class MainFrame extends JFrame {
         adminContainerPanel = new AdminContainerPanel(this);
         userContainerPanel = new UserContainerPanel(this);
 
-        // Add panels to card layout
+        // Thêm các panel vào mainPanel theo CardLayout
         mainPanel.add(loginPanel, LOGIN);
         mainPanel.add(registerPanel, REGISTER);
         mainPanel.add(forgotPasswordPanel, FORGOT_PASSWORD);
@@ -57,24 +58,30 @@ public class MainFrame extends JFrame {
         mainPanel.add(userContainerPanel, USER_CONTAINER);
 
         setContentPane(mainPanel);
+
+        // Mở đầu ở màn hình đăng nhập
         showLoginPanel();
 
         setVisible(true);
     }
 
     public void showLoginPanel() {
+        loginPanel.resetForm();  // Đảm bảo LoginPanel có method resetForm()
         mainCardLayout.show(mainPanel, LOGIN);
     }
 
     public void showRegisterPanel() {
+        registerPanel.resetForm();
         mainCardLayout.show(mainPanel, REGISTER);
     }
 
     public void showForgotPasswordPanel() {
+        forgotPasswordPanel.resetForm();
         mainCardLayout.show(mainPanel, FORGOT_PASSWORD);
     }
 
     public void showPasswordResetPanel(String username) {
+        passwordResetPanel.resetForm();
         passwordResetPanel.setUsername(username);
         mainCardLayout.show(mainPanel, PASSWORD_RESET);
     }
@@ -86,7 +93,7 @@ public class MainFrame extends JFrame {
     public void showAdminContainerPanel(String username) {
         this.loggedInUsername = username;
         this.isAdmin = true;
-        adminContainerPanel.loadData(username);
+        adminContainerPanel.loadData(username);  // đảm bảo có loadData()
         mainCardLayout.show(mainPanel, ADMIN_CONTAINER);
     }
 
@@ -106,6 +113,11 @@ public class MainFrame extends JFrame {
     }
 
     public static void main(String[] args) {
+        try {
+            UIManager.setLookAndFeel(new FlatLightLaf());
+        } catch (UnsupportedLookAndFeelException e) {
+            e.printStackTrace();
+        }
         SwingUtilities.invokeLater(MainFrame::new);
     }
 }
