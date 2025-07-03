@@ -17,19 +17,14 @@ public class DashboardAdminPanel extends JPanel {
         setLayout(new BorderLayout());
         setBackground(Color.WHITE);
 
-        // Panel chứa các nút phòng
         JPanel roomsPanel = createRoomsPanel();
         add(roomsPanel, BorderLayout.CENTER);
 
-        // Panel thống kê phòng (gói trong wrapper để khít nội dung)
         JPanel statsPanel = createStatsPanel();
         statsPanel.setPreferredSize(new Dimension(920, 130)); // chiều cao panel thống kê
 
-// Bọc trong wrapper có khoảng cách dưới
         JPanel wrapper = new JPanel(new FlowLayout(FlowLayout.CENTER, 0, 0));
         wrapper.setBackground(Color.WHITE);
-
-// 👇 Thêm khoảng cách 100px ở phía dưới bằng EmptyBorder (trên, trái, dưới, phải)
         wrapper.setBorder(BorderFactory.createEmptyBorder(0, 0, 15, 0));
 
         wrapper.add(statsPanel);
