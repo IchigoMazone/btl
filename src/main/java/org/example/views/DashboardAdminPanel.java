@@ -3,7 +3,6 @@ package org.example.views;
 import com.formdev.flatlaf.FlatLightLaf;
 import org.example.entity.Room;
 import org.example.service.RoomService;
-
 import javax.swing.*;
 import java.awt.*;
 import java.util.List;
