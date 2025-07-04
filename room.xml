@@ -9,7 +9,7 @@
     </Room>
     <Room>
         <roomNumber>102</roomNumber>
-        <status>Có khách</status>
+        <status>Trống</status>
         <roomType>Standard</roomType>
         <pricePerNight>500000</pricePerNight>
     </Room>
@@ -103,7 +103,7 @@
     </Room>
     <Room>
         <roomNumber>305</roomNumber>
-        <status>Có khách</status>
+        <status>Chưa hoàn thiện</status>
         <roomType>Suite</roomType>
         <pricePerNight>900000</pricePerNight>
     </Room>
@@ -141,7 +141,7 @@
     </Room>
     <Room>
         <roomNumber>405</roomNumber>
-        <status>Có khách</status>
+        <status>Chưa hoàn thiện</status>
         <roomType>VIP</roomType>
         <pricePerNight>1200000</pricePerNight>
     </Room>

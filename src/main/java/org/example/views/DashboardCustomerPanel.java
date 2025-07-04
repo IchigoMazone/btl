@@ -1,11 +1,16 @@
 package org.example.views;
 
 import com.formdev.flatlaf.FlatLightLaf;
+import org.example.entity.Room;
+import org.example.service.RoomService;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.List;
 
 public class DashboardCustomerPanel extends JPanel {
+
+    private List<Room> roomList;
 
     public DashboardCustomerPanel() {
         try {
@@ -17,24 +22,20 @@ public class DashboardCustomerPanel extends JPanel {
         setLayout(new BorderLayout());
         setBackground(Color.WHITE);
 
-        // Panel chứa các nút phòng
+        roomList = RoomService.readAllRooms("room.xml");
+
         JPanel roomsPanel = createRoomsPanel();
         add(roomsPanel, BorderLayout.CENTER);
 
-        // Panel thống kê phòng (gói trong wrapper để khít nội dung)
         JPanel statsPanel = createStatsPanel();
-        statsPanel.setPreferredSize(new Dimension(920, 130)); // chiều cao panel thống kê
+        statsPanel.setPreferredSize(new Dimension(920, 130));
 
-// Bọc trong wrapper có khoảng cách dưới
         JPanel wrapper = new JPanel(new FlowLayout(FlowLayout.CENTER, 0, 0));
         wrapper.setBackground(Color.WHITE);
-
-// 👇 Thêm khoảng cách 100px ở phía dưới bằng EmptyBorder (trên, trái, dưới, phải)
         wrapper.setBorder(BorderFactory.createEmptyBorder(0, 0, 15, 0));
-
         wrapper.add(statsPanel);
-        add(wrapper, BorderLayout.SOUTH);
 
+        add(wrapper, BorderLayout.SOUTH);
     }
 
     private JPanel createRoomsPanel() {
@@ -42,35 +43,36 @@ public class DashboardCustomerPanel extends JPanel {
         panel.setBackground(Color.WHITE);
         panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
-        for (int i = 0; i < 30; i++) {
-            int row = i / 6 + 1;
-            int col = i % 6 + 1;
-            String roomCode = row + "0" + col;
-
-            JButton btn = new JButton("Phòng " + roomCode);
-            btn.setPreferredSize(new Dimension(140, 80)); // giống RoomViews
+        for (Room room : roomList) {
+            JButton btn = new JButton("Phòng " + room.getRoomNumber());
+            btn.setPreferredSize(new Dimension(140, 80));
             btn.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 
-            String status;
-            if (i % 3 == 0) {
-                status = "Có khách";
-                btn.setBackground(new Color(0x3498db));
-            } else if (i % 3 == 1) {
-                status = "Trống";
-                btn.setBackground(new Color(0x2ecc71));
-            } else {
-                status = "Sửa chữa";
-                btn.setBackground(new Color(0xe74c3c));
+            String status = room.getStatus();
+            switch (status) {
+                case "Có khách" -> btn.setBackground(new Color(0x3498db));
+                case "Trống" -> btn.setBackground(new Color(0x2ecc71));
+                default -> btn.setBackground(new Color(0xe74c3c));
             }
 
             btn.setOpaque(true);
             btn.setBorderPainted(false);
             btn.setForeground(Color.WHITE);
 
-            btn.addActionListener(e ->
-                    JOptionPane.showMessageDialog(this,
-                            "Bạn đã chọn phòng " + roomCode + " - Trạng thái: " + status)
-            );
+            btn.addActionListener(e -> {
+                String message;
+                switch (room.getStatus()) {
+                    case "Trống" -> message = "Phòng " + room.getRoomNumber() + " : đang trống.\n"
+                            + "Loại: " + room.getRoomType()
+                            + "\nGiá / đêm: " + room.getPricePerNight() + " VND";
+                    case "Có khách" -> message = "Phòng " + room.getRoomNumber() + " : đang có khách!.\n"
+                            + "Loại: " + room.getRoomType()
+                            + "\nGiá / đêm: " + room.getPricePerNight() + " VND";
+                    default -> message = "Phòng " + room.getRoomNumber() + " có chưa hoạt động.";
+                }
+
+                JOptionPane.showMessageDialog(this, message);
+            });
 
             panel.add(btn);
         }
@@ -78,36 +80,43 @@ public class DashboardCustomerPanel extends JPanel {
         return panel;
     }
 
+
     private JPanel createStatsPanel() {
+        int emptyCount = 0, occupiedCount = 0, RoomCount = 0;
+
+        for (Room room : roomList) {
+            switch (room.getStatus()) {
+                case "Trống" -> emptyCount++;
+                case "Có khách" -> occupiedCount++;
+                default -> RoomCount++;
+            }
+        }
+
         JPanel panel = new JPanel();
         panel.setBackground(new Color(0xecf0f1));
         panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
-        panel.setBorder(BorderFactory.createTitledBorder("Thống kê phòng"));
-        panel.setBorder(BorderFactory.createEmptyBorder());
-
         panel.setBorder(BorderFactory.createCompoundBorder(
-                panel.getBorder(),
-                BorderFactory.createEmptyBorder(5, 10, 5, 10))
-        );
+                BorderFactory.createEmptyBorder(0, 0, 0, 0),
+                BorderFactory.createEmptyBorder(5, 10, 5, 10)
+        ));
 
-        panel.add(createStatItem("Phòng trống", new Color(0x2ecc71), 10));
+        panel.add(createStatItem("Phòng trống ", new Color(0x2ecc71), emptyCount));
         panel.add(Box.createHorizontalStrut(30));
-        panel.add(createStatItem("Có khách", new Color(0x3498db), 12));
+        panel.add(createStatItem("Có khách ", new Color(0x3498db), occupiedCount));
         panel.add(Box.createHorizontalStrut(30));
-        panel.add(createStatItem("Sửa chữa", new Color(0xe74c3c), 8));
+        panel.add(createStatItem("Chưa hoạt động ", new Color(0xe74c3c), RoomCount));
 
         return panel;
     }
 
     private JPanel createStatItem(String label, Color color, int count) {
-        JPanel item = new JPanel();
-        item.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 5));
+        JPanel item = new JPanel(new FlowLayout(FlowLayout.LEFT, 10, 5));
         item.setOpaque(false);
 
         JLabel colorBox = new JLabel();
         colorBox.setOpaque(true);
         colorBox.setBackground(color);
-        colorBox.setPreferredSize(new Dimension(20, 20)); // ô vuông màu
+        colorBox.setPreferredSize(new Dimension(20, 20));
 
         JLabel text = new JLabel(label + ": " + count);
         text.setFont(new Font("Segoe UI", Font.PLAIN, 13));
@@ -127,14 +136,12 @@ public class DashboardCustomerPanel extends JPanel {
                 e.printStackTrace();
             }
 
-            JFrame frame = new JFrame("Dashboard Admin Panel");
+            JFrame frame = new JFrame("Dashboard Customer Panel");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setSize(950, 720); // ✅ Kích thước đúng yêu cầu
+            frame.setSize(950, 720);
             frame.setLocationRelativeTo(null);
-            frame.setContentPane(new DashboardAdminPanel());
+            frame.setContentPane(new DashboardCustomerPanel());
             frame.setVisible(true);
         });
     }
 }
-
-

@@ -1,29 +1,22 @@
 package org.example.entity;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
+
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
 import java.util.List;
 
 @XmlRootElement(name = "Rooms")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RoomXML {
 
-    @XmlElement(name = "Room")
-    private List<Room> rooms;
+    private List<Room> Room;
 
-    public RoomXML() {
+    public RoomXML() {}
+
+    public RoomXML(List<Room> Room) {
+        this.Room = Room;
     }
 
-    public RoomXML(List<Room> rooms) {
-        this.rooms = rooms;
-    }
-
-    public List<Room> getRooms() {
-        return rooms;
-    }
-
-    public void setRooms(List<Room> rooms) {
-        this.rooms = rooms;
-    }
+    public List<Room> getRoom() { return Room; }
+    public void setRoom(List<Room> Room) { this.Room = Room; }
 }
