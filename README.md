@@ -21,6 +21,6 @@ một frame liên kết với nhiều panel chuyển động mượt mà hơn.
 + Thông tin : (2)  
   + `Acount Admin : admin/123456`  
   + `Account Customer : husky123/nhat9999`  
-hoặc có thể tạo account hoặc tra cứu database `userinfos.xml`
+  + hoặc có thể tạo account hoặc tra cứu database `userinfos.xml`
 
 
