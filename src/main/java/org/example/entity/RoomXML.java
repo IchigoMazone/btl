@@ -11,12 +11,18 @@ public class RoomXML {
 
     private List<Room> Room;
 
-    public RoomXML() {}
+    public RoomXML() {
+    }
 
     public RoomXML(List<Room> Room) {
         this.Room = Room;
     }
 
-    public List<Room> getRoom() { return Room; }
-    public void setRoom(List<Room> Room) { this.Room = Room; }
+    public List<Room> getRoom() {
+        return Room;
+    }
+
+    public void setRoom(List<Room> Room) {
+        this.Room = Room;
+    }
 }

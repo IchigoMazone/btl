@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Rooms>
+    <Room>
+        <roomNumber>102</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>Standard</roomType>
+        <pricePerNight>500000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>103</roomNumber>
+        <status>Chưa hoạt động</status>
+        <roomType>Standard</roomType>
+        <pricePerNight>500000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>104</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>Standard</roomType>
+        <pricePerNight>500000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>105</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>Standard</roomType>
+        <pricePerNight>500000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>201</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>Standard</roomType>
+        <pricePerNight>500000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>202</roomNumber>
+        <status>Chưa hoạt động</status>
+        <roomType>Deluxe</roomType>
+        <pricePerNight>700000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>203</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>Deluxe</roomType>
+        <pricePerNight>700000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>204</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>Deluxe</roomType>
+        <pricePerNight>700000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>205</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>Deluxe</roomType>
+        <pricePerNight>700000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>301</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>Deluxe</roomType>
+        <pricePerNight>700000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>302</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>Deluxe</roomType>
+        <pricePerNight>700000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>303</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>Suite</roomType>
+        <pricePerNight>900000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>304</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>Suite</roomType>
+        <pricePerNight>900000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>305</roomNumber>
+        <status>Chưa hoạt động</status>
+        <roomType>Suite</roomType>
+        <pricePerNight>900000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>401</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>Suite</roomType>
+        <pricePerNight>900000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>402</roomNumber>
+        <status>Chưa hoạt động</status>
+        <roomType>Suite</roomType>
+        <pricePerNight>900000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>403</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>Suite</roomType>
+        <pricePerNight>900000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>404</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1200000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>405</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1200000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>501</roomNumber>
+        <status>Chưa hoạt động</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1200000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>502</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1200000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>503</roomNumber>
+        <status>Chưa hoạt động</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1200000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>504</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1200000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>505</roomNumber>
+        <status>Chưa hoạt động</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1200000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>601</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1200000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>602</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1200000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>603</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1200000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>604</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1200000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>605</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1200000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>701</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>Suite</roomType>
+        <pricePerNight>900000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>702</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>5000000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>703</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>704</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>705</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>801</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>802</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>Suite</roomType>
+        <pricePerNight>1</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>804</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>100000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>805</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>901</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>Suite</roomType>
+        <pricePerNight>1000</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>902</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>Suite</roomType>
+        <pricePerNight>1</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>903</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>904</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1</pricePerNight>
+    </Room>
+    <Room>
+        <roomNumber>905</roomNumber>
+        <status>Đang hoạt động</status>
+        <roomType>VIP</roomType>
+        <pricePerNight>1</pricePerNight>
+    </Room>
+</Rooms>

@@ -59,9 +59,7 @@ public class MainFrame extends JFrame {
 
         setContentPane(mainPanel);
 
-        // Mở đầu ở màn hình đăng nhập
         showLoginPanel();
-
         setVisible(true);
     }
 

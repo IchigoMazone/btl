@@ -4,7 +4,7 @@
 `1. Chương trình hoàn thiện đầy đủ nhất : org/example/views -> Run : MainFrame`   
 `2. Chương trình hoàn thiện chi tiết nhất : org/example/run.Main`  
 + Nhược điểm của (1) so với (2) :  
-  + Chưa gắn check thông tin từ Database XML  .
+   + Chưa gắn check thông tin từ Database XML  .
 
 
 + Ưu điểm (1) so với (2) :  

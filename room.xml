@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Rooms>
-    <!-- Tầng 1 -->
     <Room>
         <roomNumber>101</roomNumber>
         <status>Trống</status>
@@ -37,8 +36,6 @@
         <roomType>Standard</roomType>
         <pricePerNight>500000</pricePerNight>
     </Room>
-
-    <!-- Tầng 2 -->
     <Room>
         <roomNumber>201</roomNumber>
         <status>Sửa chữa</status>
@@ -75,8 +72,6 @@
         <roomType>Deluxe</roomType>
         <pricePerNight>700000</pricePerNight>
     </Room>
-
-    <!-- Tầng 3 -->
     <Room>
         <roomNumber>301</roomNumber>
         <status>Trống</status>
@@ -103,9 +98,9 @@
     </Room>
     <Room>
         <roomNumber>305</roomNumber>
-        <status>Chưa hoàn thiện</status>
+        <status>Đang hoạt động</status>
         <roomType>Suite</roomType>
-        <pricePerNight>900000</pricePerNight>
+        <pricePerNight>5000000</pricePerNight>
     </Room>
     <Room>
         <roomNumber>306</roomNumber>
@@ -113,8 +108,6 @@
         <roomType>Suite</roomType>
         <pricePerNight>900000</pricePerNight>
     </Room>
-
-    <!-- Tầng 4 -->
     <Room>
         <roomNumber>401</roomNumber>
         <status>Có khách</status>
@@ -151,8 +144,6 @@
         <roomType>VIP</roomType>
         <pricePerNight>1200000</pricePerNight>
     </Room>
-
-    <!-- Tầng 5 -->
     <Room>
         <roomNumber>501</roomNumber>
         <status>Sửa chữa</status>

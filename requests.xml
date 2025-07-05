@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Requests>
+    <Request>
+        <id>REQ001</id>
+        <fullName>Nguyễn Văn A</fullName>
+        <phone>0987654321</phone>
+        <cccd>0123456789</cccd>
+        <roomId>101</roomId>
+        <checkIn>2025-07-15T14:00:00</checkIn>
+        <checkOut>2025-07-17T12:00:00</checkOut>
+        <submittedAt>2025-07-05T18:55:19.967179123</submittedAt>
+        <status>Đã duyệt</status>
+        <history>
+            <action>
+                <type>Gửi yêu cầu</type>
+                <by>REQ001</by>
+                <time>2025-07-05T18:55:19.967478355</time>
+            </action>
+            <action>
+                <type>Duyệt yêu cầu</type>
+                <by>admin01</by>
+                <time>2025-07-05T18:55:19.968437962</time>
+            </action>
+        </history>
+    </Request>
+</Requests>

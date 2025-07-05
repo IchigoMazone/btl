@@ -8,35 +8,38 @@ import java.awt.event.MouseEvent;
 public class AdminContainerPanel extends JPanel {
 
     private MainFrame mainFrame;
-    private CardLayout cardLayout;
-    private JPanel contentPanel;
+    private CardLayout adminCardLayout;
+    private JPanel adminPanelContainer;
     private JButton selectedButton;
-    private JLabel userLabel;  // Label hiển thị tên người dùng
+    private JLabel userLabel;
+
+    private DashboardAdminPanel dashboardAdminPanel;
 
     public AdminContainerPanel(MainFrame mainFrame) {
         this.mainFrame = mainFrame;
         setLayout(new BorderLayout());
 
-        cardLayout = new CardLayout();
-        contentPanel = new JPanel(cardLayout);
+        adminCardLayout = new CardLayout();
+        adminPanelContainer = new JPanel(adminCardLayout);
 
-        // Thêm các panel con
-        contentPanel.add(new DashboardAdminPanel(), "Dashboard");
-        contentPanel.add(new RoomManagementPanel(), "Room");
-        contentPanel.add(new BookingManagementPanel(), "Booking");
-        contentPanel.add(new GuestManagementPanel(), "Guest");
-        contentPanel.add(new PaymentManagementPanel(), "Payment");
+        dashboardAdminPanel = new DashboardAdminPanel();
 
-        add(contentPanel, BorderLayout.CENTER);
+        RoomManagementPanel roomManagementPanel = new RoomManagementPanel(() -> dashboardAdminPanel.reloadRooms());
 
-        // Toolbar bên trái
+        adminPanelContainer.add(dashboardAdminPanel, "DASHBOARD");
+        adminPanelContainer.add(roomManagementPanel, "ROOM");
+        adminPanelContainer.add(new BookingManagementPanel(), "BOOKING");
+        adminPanelContainer.add(new GuestManagementPanel(), "GUEST");
+        adminPanelContainer.add(new PaymentManagementPanel(), "PAYMENT");
+
+        add(adminPanelContainer, BorderLayout.CENTER);
+
         JToolBar toolbar = new JToolBar(JToolBar.VERTICAL);
         toolbar.setFloatable(false);
         toolbar.setBackground(new Color(0x2c3e50));
         toolbar.setPreferredSize(new Dimension(240, 800));
         toolbar.setLayout(new BoxLayout(toolbar, BoxLayout.Y_AXIS));
 
-        // Label chào người dùng
         userLabel = new JLabel(" ");
         userLabel.setForeground(Color.WHITE);
         userLabel.setFont(new Font("Segoe UI", Font.BOLD, 14));
@@ -48,13 +51,12 @@ public class AdminContainerPanel extends JPanel {
         toolbar.add(userLabel);
         toolbar.add(Box.createVerticalStrut(30));
 
-        // Các nút menu
-        JButton btnDashboard = createSidebarButton("Trang chủ", "Dashboard");
-        JButton btnRoom = createSidebarButton("Quản lý phòng", "Room");
-        JButton btnBooking = createSidebarButton("Quản lý đặt phòng", "Booking");
-        JButton btnGuest = createSidebarButton("Quản lý khách", "Guest");
-        JButton btnPayment = createSidebarButton("Thanh toán", "Payment");
-        JButton btnLogout = createSidebarButton("Đăng xuất", null); // null dùng để xử lý logout riêng
+        JButton btnDashboard = createSidebarButton("Trang chủ", "DASHBOARD");
+        JButton btnRoom = createSidebarButton("Quản lý phòng", "ROOM");
+        JButton btnBooking = createSidebarButton("Quản lý đặt phòng", "BOOKING");
+        JButton btnGuest = createSidebarButton("Quản lý khách", "GUEST");
+        JButton btnPayment = createSidebarButton("Thanh toán", "PAYMENT");
+        JButton btnLogout = createSidebarButton("Thoát", null); // <== đổi từ "Đăng xuất"
 
         selectedButton = btnDashboard;
         btnDashboard.setForeground(new Color(0xf1c40f));
@@ -68,7 +70,7 @@ public class AdminContainerPanel extends JPanel {
         toolbar.add(btnGuest);
         toolbar.add(Box.createVerticalStrut(20));
         toolbar.add(btnPayment);
-        toolbar.add(Box.createVerticalGlue()); // Đẩy nút logout xuống dưới
+        toolbar.add(Box.createVerticalGlue());
         toolbar.add(btnLogout);
         toolbar.add(Box.createVerticalStrut(20));
 
@@ -113,22 +115,23 @@ public class AdminContainerPanel extends JPanel {
             btn.setForeground(hoverColor);
 
             if (cardName != null) {
-                // Chuyển tới panel tương ứng
-                cardLayout.show(contentPanel, cardName);
+                if ("DASHBOARD".equals(cardName)) {
+                    dashboardAdminPanel.reloadRooms();
+                }
+                adminCardLayout.show(adminPanelContainer, cardName);
             } else {
-                // Xử lý đăng xuất
                 int confirm = JOptionPane.showConfirmDialog(
                         this,
-                        "Bạn có chắc chắn muốn đăng xuất?",
-                        "Xác nhận đăng xuất",
+                        "Bạn có chắc chắn muốn thoát?",
+                        "Xác nhận thoát", // <== đổi tiêu đề
                         JOptionPane.YES_NO_OPTION
                 );
                 if (confirm == JOptionPane.YES_OPTION) {
-                    JOptionPane.showMessageDialog(this, "Đăng xuất thành công!");
+                    JOptionPane.showMessageDialog(this, "Thoát thành công!");
                     mainFrame.showLoginPanel();
                 } else {
                     btn.setForeground(normalColor);
-                    selectedButton = null;
+                    if (selectedButton != null) selectedButton.setForeground(hoverColor);
                 }
             }
         });
@@ -137,8 +140,8 @@ public class AdminContainerPanel extends JPanel {
     }
 
     public void loadData(String username) {
-        System.out.println("Load dữ liệu cho admin: " + username);
         userLabel.setText("Xin chào, " + username + "!");
-        cardLayout.show(contentPanel, "Dashboard");
+        dashboardAdminPanel.reloadRooms();
+        adminCardLayout.show(adminPanelContainer, "DASHBOARD");
     }
 }
