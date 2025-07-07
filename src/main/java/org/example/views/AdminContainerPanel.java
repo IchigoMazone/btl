@@ -42,7 +42,7 @@ public class AdminContainerPanel extends JPanel {
 
         userLabel = new JLabel(" ");
         userLabel.setForeground(Color.WHITE);
-        userLabel.setFont(new Font("Segoe UI", Font.BOLD, 14));
+        userLabel.setFont(new Font("Segoe UI", Font.PLAIN, 12));
         userLabel.setMaximumSize(new Dimension(Integer.MAX_VALUE, 30));
         userLabel.setHorizontalAlignment(SwingConstants.CENTER);
         userLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
